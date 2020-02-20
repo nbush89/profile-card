@@ -1,0 +1,23 @@
+<div class="container">
+  <form class="form" #addForm="ngForm" (ngSubmit)="editProfile(addForm)">
+    <label for="name">Enter Your Name</label>
+    <input type="text" id="name" name="name" [ngModel]="profile.name" />
+    <label for="contact">Enter Your Contact Info</label>
+    <input
+      type="text"
+      id="contact"
+      name="contact"
+      ngModel
+      [ngModel]="profile.contact"
+    />
+    <label for="bio">Enter Your Bio</label>
+    <textarea
+      id="bio"
+      name="bio"
+      rows="8"
+      ngModel
+      [ngModel]="profile.bio"
+    ></textarea>
+    <button>Update</button>
+  </form>
+</div>
